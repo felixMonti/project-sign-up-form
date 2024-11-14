@@ -83,7 +83,7 @@ Form {
     flex-direction: column;
     justify-content: space-between;
     gap: 40px;
-    box-shadow: 1px, 15px, 10px, lightgrey;
+    box-shadow: 1px 5px 10px lightgray;
 }
 
 form > div {
@@ -100,6 +100,18 @@ form > div > div {
 input {
     width: 20vw;
     height: 35px;
-    border: .2px solid lightgray;
+    border: .2px solid #e5e7eb;
     border-radius: 5px;
+}
+
+input:focus {
+    box-shadow: 1px 5px 10px lightgray;
+}
+
+input[type="text"]:focus {
+    outline-color: blue;
+}
+
+input[type="password"]:invalid {
+    outline-color: red;
 }
