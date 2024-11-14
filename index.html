@@ -45,12 +45,14 @@
                 <div>
                     <div class="password">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password">
-                        <p class="password-alert">*Password don't match</p>
+                        <input type="password" name="password" id="password" required minlength="8" 
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                               title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 or more characters">
+                        <p class="password-alert">*Passwords do not match</p>
                     </div>
                     <div class="confirm">
-                        <label for="cofirm-password">Confirm Password</label>
-                        <input type="password" name="confirm" id="confirm">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" name="confirm-password" id="confirm-password" required minlength="8">
                     </div>
                 </div>
             </form>
@@ -65,4 +67,4 @@
     </div>
 </body>
 <script src="./app.js"></script>
-</html>
+</html> 
